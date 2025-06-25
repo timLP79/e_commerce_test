@@ -4,14 +4,16 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES2023-yellow?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-brightgreen?logo=node.js)](https://nodejs.org/)
 
-> This Playwright-based QA test validates that the **first 100 articles** on [Hacker News /newest](https://news.ycombinator.com/newest) are sorted in correct chronological order, from **newest to oldest**.
+> This Playwright-based QA test will goto [Swag Labs](https://saucedemo.com), login, then sort the items **low to high** then verify that the sort is correct.
 
 ---
 
 ## 🎯 Test Objective
 
-✔️ Navigate through `/newest` and paginate until 100 articles are collected  
-✔️ Parse each article's age (e.g., “2 minutes ago”, “1 hour ago”) into minutes  
+✔️ Navigate through `/inventory`  
+✔️ Filter the items low to high  
+✔️ Parse the items on the page for the price  
+✔️ Confirm that the items have been sorted correctly **from lowest dollar value to highest dollar value**   
 ✔️ Confirm the list is sorted from **newest (smallest number)** to **oldest (largest)**  
 ✔️ Output validation results via:
 - Console summary
@@ -25,8 +27,8 @@
 ### 📦 1. Clone & Install
 
 ```bash
-  git clone https://github.com/timLP79/playwright_sorting_validator.git
-  cd playwright_sorting_validator
+  git clone https://github.com/timLP79/e_commerce_test.git
+  cd e_commerce_test
   npm install
 ```
 
