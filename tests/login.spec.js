@@ -5,8 +5,8 @@ test("Navigate to ecommerce site and login", async ({ page }) => {
     await page.goto("https://www.saucedemo.com/");
 
     //fill in form
-    await page.locator("#user-name").fill("standard_user");
-    await page.locator("#password").fill("secret_sauce");
+    await page.getByRole("textbox", { name: "Username" }).fill("standard_user");
+    await page.getByRole("textbox", {name: "Password"}).fill("secret_sauce");
 
     //submit form
     await page.getByRole('button', { name: "Login"}).click();
