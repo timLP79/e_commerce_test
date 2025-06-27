@@ -15,10 +15,9 @@
 ✔️ Filter the items low to high  
 ✔️ Parse the items on the page for the price  
 ✔️ Confirm that the items have been sorted correctly **from lowest dollar value to highest dollar value**   
-✔️ Confirm the list is sorted from **newest (smallest number)** to **oldest (largest)**  
 ✔️ Output validation results via:
 - Console summary
-- Structured `results.json`
+- Structured `results-${testInfo.project.name}.json`
 - Playwright HTML report
 
 ---
@@ -49,7 +48,7 @@
 
 ## 📁 Output
 
-- `output/results.json`: JSON file containing item name, price
+- `output/results-${testInfo.project.name}.json`: JSON file containing item name, price
 - `playwright-report/`: HTML report of the test run
 - Console output includes a clear `TEST SUMMARY`
 
@@ -58,12 +57,18 @@
 ## 🧪 Sample Output
 
 ```plaintext
---- TEST SUMMARY ---
-Items on page: 20
-Articles checked for sort: 20
-Least expensive item: $7.99
-Most expensive item: $49.99
-Sorted correctly: ✅ YES
+--- TEST SUMMARY (firefox) ---
+Items found: 6
+Sorted low to high: ✅ YES
+Results saved to output/results-firefox.json
+--- TEST SUMMARY (webkit) ---
+Items found: 6
+Sorted low to high: ✅ YES
+Results saved to output/results-webkit.json
+--- TEST SUMMARY (chromium) ---
+Items found: 6
+Sorted low to high: ✅ YES
+Results saved to output/results-chromium.json
 ```
 
 ---
