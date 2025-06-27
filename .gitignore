@@ -3,3 +3,4 @@ node_modules/
 *.iml
 /playwright-report/index.html
 /test-results/.last-run.json
+output/
